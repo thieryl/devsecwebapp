@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+  agent {
+    node {
+      label 'jenkins_mvn_agent'
+    }
+
+  }
   stages {
     stage('Start Build') {
       parallel {
