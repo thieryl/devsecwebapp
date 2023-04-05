@@ -20,6 +20,12 @@ pipeline {
           }
         }
 
+        stage('Check pom.xml') {
+          steps {
+            fileExists 'pom.xml'
+          }
+        }
+
       }
     }
 
