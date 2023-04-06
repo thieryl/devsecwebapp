@@ -37,7 +37,10 @@ pipeline {
 
     stage('Build Docker image') {
       steps {
-        sh 'docker build -t thieryl/devsecwebapp:v0.1.0 .'
+        node(label: 'master') {
+          sh 'docker build -t thieryl/devsecwebapp:v0.1.0 .'
+        }
+
       }
     }
 
