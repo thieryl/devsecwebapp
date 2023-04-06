@@ -37,7 +37,7 @@ pipeline {
 
     stage('build docker image') {
       steps {
-        sh 'docker build -t thieryl/devsecwebapp:v0.1.0 .'
+        sh 'sudo docker build -t thieryl/devsecwebapp:v0.1.0 .'
       }
     }
 
